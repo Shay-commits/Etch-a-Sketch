@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+<link rel="stylesheet" href="Etch-a-sketch.css">
+
+
+
+
+  </head>
+  <body>
+
+
+
+    <div id="remove">
+
+<button id="button" type="button" name="button">  Reset Grid </button>
+
+       <div>
+
+    <div id="container"> </div>
+
+
+
+  </body>
+
+<footer>
+
+  <script type="text/javascript">
+
+
+
+  function grid(v) {
+
+  var home = document.getElementById("container")
+
+  for(var i = 0; i < v; i++) {
+
+  var column = document.createElement('div')
+  column.className = 'column';
+
+
+  for (var j = 0; j < v; j++) {
+
+    var row = document.createElement('div')
+    row.className = "row"
+
+    column.appendChild(row)
+  }
+
+
+  home.appendChild(column)
+
+
+
+
+
+  }
+
+
+
+
+  }
+
+  grid(6)
+
+</script>
+
+<script type="text/javascript">
+
+
+
+window.onload = function() {
+
+for (var i = 0; i <= 36 ;i++) {
+
+  var henry = document.getElementsByClassName('row')
+
+henry[i].addEventListener("mouseenter", function(e){
+
+   e.target.style.backgroundColor = 'red';
+
+
+})
+
+}}
+
+
+var reset = document.getElementById('button')
+
+reset.addEventListener('click', resetIt)
+
+function resetIt() {
+
+var huncho = document.getElementById('container')
+
+while (huncho.firstChild) {
+huncho.removeChild(huncho.firstChild)
+}
+
+let v = prompt("please enter grid size?")
+
+grid(v)
+
+container.style.gridTemplateColumns = `repeat(${v}, 1fr)`;
+
+for (var i = 0; i <= v*v ;i++) {
+
+  var henry = document.getElementsByClassName('row')
+
+henry[i].addEventListener("mouseenter", function(e){
+
+   e.target.style.backgroundColor = 'red';
+
+
+})
+
+} }
+
+
+
+
+
+
+
+
+  </script>
+
+</footer>
+
+</html>
